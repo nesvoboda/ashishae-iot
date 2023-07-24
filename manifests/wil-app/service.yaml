@@ -6,8 +6,8 @@ metadata:
 spec:
   ports:
     - name: web
-      port: 8080
-      targetPort: 8080
+      port: 8888
+      targetPort: 8888
 
   selector:
     app: wil-app
