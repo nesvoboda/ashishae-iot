@@ -3,15 +3,25 @@ kind: Ingress
 metadata:
   name: wil-app-ingress
 spec:
+  ingressClassName: nginx
   rules:
-    - http:
+    - host: wil-app.bladash.lol
+      http:
         paths:
-        - path: /wil-app
+        - path: /
           pathType: Prefix
           backend:
             service:
               name: wil-app
               port:
                 number: 8888
-
-  
+    - host: localhost
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: wil-app
+              port:
+                number: 8888
