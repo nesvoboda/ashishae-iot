@@ -4,7 +4,8 @@ metadata:
   name: wil-app-ingress
 spec:
   rules:
-    - http:
+    - host: localhost
+      http:
         paths:
         - path: /wil-app
           pathType: Prefix
