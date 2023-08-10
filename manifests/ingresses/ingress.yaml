@@ -7,7 +7,7 @@ spec:
     - host: localhost
       http:
         paths:
-        - path: /wil-app
+        - path: /
           pathType: Prefix
           backend:
             service:
